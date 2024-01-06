@@ -1,0 +1,21 @@
+{% extends "main.html" %}
+
+{% block title %}Post details{% endblock %}
+
+{% block content %}
+   <table>
+       <tr>
+           <th>Title</th>
+           <td>{{ post.title }}</td>
+       </tr>
+       <tr>
+           <th>Content</th>
+           <td>{{ post.content }}</td>
+       </tr>
+       <tr>
+           <th>Author</th>
+           <td>{{ post.author }}</td>
+       </tr>
+   </table>
+   <a href="{% url "posts:list" %}">back</a>
+{% endblock %}
