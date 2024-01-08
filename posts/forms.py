@@ -1,19 +1,7 @@
 from django import forms
-from posts.models import Author
+from posts.models import Post, Author
 
-class PostForm(forms.Form):
-   
-    choices = {}
-
-    for author in Author.objects.all():
-        choices[author.id] = author.email
-    
-    title = forms.CharField(required=True)
-    content = forms.CharField(widget=forms.Textarea(), required=True)
-    author = forms.ChoiceField(choices=choices, required=True)
-
-    field_order = ['title', 'content', 'author']
-
+class PostForm(forms.ModelForm):
     def clean(self):
         cleaned_data = super().clean()
         title = cleaned_data.get('title')
@@ -23,12 +11,12 @@ class PostForm(forms.Form):
         if not (title and content and author):
             raise forms.ValidationError("Nie podano żadnej wartości!")
         
-class AuthorForm(forms.Form):
-    
-    email = forms.EmailField(required=True)
-    bio = forms.CharField(widget=forms.Textarea(),required=False)
-    nick = forms.CharField(required=True)
+    class Meta:
+        model = Post
+        fields = "__all__"
 
+        
+class AuthorForm(forms.ModelForm):
     field_order = ['email', 'nick', 'bio']
 
     def clean(self):
@@ -40,4 +28,7 @@ class AuthorForm(forms.Form):
         if not (email and nick):
             raise forms.ValidationError("Nie podano wymaganych pól")
         
+    class Meta:
+        model = Author
+        fields = "__all__"
 

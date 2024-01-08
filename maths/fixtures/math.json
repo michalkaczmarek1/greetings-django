@@ -1,0 +1,134 @@
+[
+    {
+        "model": "maths.math",
+        "pk": 1,
+        "fields": {
+            "operation": "add",
+            "a": 21,
+            "b": 2,
+            "created": "2024-01-03T10:35:55.212Z",
+            "result": 2
+        }
+    },
+    {
+        "model": "maths.math",
+        "pk": 2,
+        "fields": {
+            "operation": "sub",
+            "a": 10,
+            "b": 20,
+            "created": "2024-01-03T10:36:59.108Z",
+            "result": 3
+        }
+    },
+    {
+        "model": "maths.math",
+        "pk": 3,
+        "fields": {
+            "operation": "div",
+            "a": 10,
+            "b": 2,
+            "created": "2024-01-03T10:38:16.962Z",
+            "result": 4
+        }
+    },
+    {
+        "model": "maths.math",
+        "pk": 4,
+        "fields": {
+            "operation": "div",
+            "a": 20,
+            "b": 4,
+            "created": "2024-01-03T10:38:16.962Z",
+            "result": 4
+        }
+    },
+    {
+        "model": "maths.math",
+        "pk": 5,
+        "fields": {
+            "operation": "div",
+            "a": 20,
+            "b": 2,
+            "created": "2024-01-03T10:38:16.962Z",
+            "result": 5
+        }
+    },
+    {
+        "model": "maths.math",
+        "pk": 6,
+        "fields": {
+            "operation": "div",
+            "a": 8,
+            "b": 4,
+            "created": "2024-01-03T10:38:16.962Z",
+            "result": 6
+        }
+    },
+    {
+        "model": "maths.math",
+        "pk": 7,
+        "fields": {
+            "operation": "add",
+            "a": 30,
+            "b": 2,
+            "created": "2024-01-03T10:38:16.962Z",
+            "result": 7
+        }
+    },
+    {
+        "model": "maths.math",
+        "pk": 8,
+        "fields": {
+            "operation": "sub",
+            "a": 14,
+            "b": 2,
+            "created": "2024-01-03T10:38:16.962Z",
+            "result": 5
+        }
+    },
+    {
+        "model": "maths.math",
+        "pk": 9,
+        "fields": {
+            "operation": "mul",
+            "a": 44,
+            "b": 2,
+            "created": "2024-01-03T10:38:16.962Z",
+            "result": 8
+        }
+    },
+    {
+        "model": "maths.math",
+        "pk": 10,
+        "fields": {
+            "operation": "div",
+            "a": 10,
+            "b": 5,
+            "created": "2024-01-03T10:38:16.962Z",
+            "result": 6
+        }
+    },
+    {
+        "model": "maths.math",
+        "pk": 11,
+        "fields": {
+            "operation": "div",
+            "a": 100,
+            "b": 2,
+            "created": "2024-01-03T10:38:16.962Z",
+            "result": 9
+        }
+    },
+    {
+        "model": "maths.math",
+        "pk": 12,
+        "fields": {
+            "operation": "div",
+            "a": 80,
+            "b": 2,
+            "created": "2024-01-03T10:38:16.962Z",
+            "result": 10
+        }
+    }
+]
