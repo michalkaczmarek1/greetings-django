@@ -1,0 +1,26 @@
+{% extends 'main.html' %}
+
+{% block title %}
+  {{ title }}
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h3>O mnie</h3>
+        {% load static %}
+        <img src="{% static 'greetings/img/zdjecie.jpeg' %}" alt="własciciel strony" height="150" width="150" />
+      </div>
+      <p>Urodziłem się 15 kwietnia 2000 roku w Warszawie. Mój ojciec Andrzej jest dyrektorem działu logistyki w firmie TransportFast, a matka Hanna pracuje jako fizjoterapeutka. Mam starszego brata Macieja.
+
+        W latach 2007–2013 byłem uczniem podstawówki nr 15 w Warszawie, a następnie od 2013 do 2016 r. uczyłem się w gimnazjum nr 6 w Warszawie, które ukończyłem ze świadectwem z czerwonym paskiem.
+
+        W 2016 r., dzięki bardzo dobrym wynikom egzaminu gimnazjalnego, dostałem się do najlepszego w Polsce XIV LO im. St. Staszica (według rankingu liceów Perspektywy). W liceum pełniłem funkcję wiceprzewodniczącego szkoły, a także wygrałem wewnętrzny konkurs z języka angielskiego.
+
+        W 2019 r. zdałem maturę i udało mi się zostać studentem informatyki na Uniwersytecie Warszawskim, gdzie obecnie studiuję (I rok studiów licencjackich).
+
+        Naukę łączę z wolontariatem w lokalnym schronisku dla psów. Wolny czas poświęcam na dodatkowe kursy programowania oraz sport (siatkówka i bieganie). Interesuję się nowymi technologiami i grami komputerowymi.</p>
+    </div>
+  </div>
+{% endblock %}

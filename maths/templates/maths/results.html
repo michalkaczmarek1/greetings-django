@@ -1,13 +1,14 @@
-{% extends 'maths/main.html' %}
+{% extends 'main.html' %}
 
 {% block title %}
   Results list
 {% endblock %}
 
 {% block content %}
-  <ul>
+  <h3>Results</h3>
+  <ul class="list-group">
     {% for r in results %}
-      <li>{{ r }}</li>
+      <li class="list-group-item">{{ r }}</li>
     {% endfor %}
   </ul>
 

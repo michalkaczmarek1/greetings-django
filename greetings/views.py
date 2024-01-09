@@ -3,9 +3,25 @@ from django.http import HttpResponse
 
 # Create your views here.
 
-def greetings(request):
-   return HttpResponse("Hello World!")
 
-def greetings_with_name(request, a):
-   name_cap = a.capitalize()
-   return HttpResponse("Hello " + name_cap)
+def greetings(request):
+    
+    return render(
+        request=request,
+        template_name="greetings/homepage.html",
+        context={"hello": "powitanie"}
+    )
+
+def about(request):
+    
+    return render(
+        request=request,
+        template_name="greetings/about.html"
+    )
+
+def contact(request):
+    
+    return render(
+        request=request,
+        template_name="greetings/contact.html"
+    )

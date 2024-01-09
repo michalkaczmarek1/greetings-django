@@ -1,21 +1,46 @@
 {% extends 'main.html' %}
 
+{% load django_bootstrap5 %}
+
 {% block title %}
   Posts list
 {% endblock %}
 
 {% block content %}
-  <ul>
+<div class="col">
+  <h3>Lista postów</h3>
+  <ul class="list-group">
     {% for p in posts %}
-      <li>
+      <li class="list-group-item">
         <a href="{% url 'posts:details' p.id %}">{{ p }}</a>
       </li>
     {% endfor %}
   </ul>
-  <h3>Dodaj post</h3>
+  <div class="pagination">
+    <span class="step-links">
+      {% if posts.has_previous %}
+        <a href="?page=1">« first</a>
+        <a href="?page={{ posts.previous_page_number }}">previous</a>
+      {% endif %}
+
+      <span class="current">Page {{ posts.number }} of {{ posts.paginator.num_pages }}.</span>
+
+      {% if posts.has_next %}
+        <a href="?page={{ posts.next_page_number }}">next</a>
+        <a href="?page={{ posts.paginator.num_pages }}">last »</a>
+      {% endif %}
+    </span>
+  </div>
+</div>
+<div class="col">
+  <h4>Dodaj post</h4>
+
   <form method="post">
     {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="go" />
+    {% bootstrap_form form %}
+    
+    <input type="submit" value="go" class="btn btn-primary"/>
+    
   </form>
+</div>
 {% endblock %}

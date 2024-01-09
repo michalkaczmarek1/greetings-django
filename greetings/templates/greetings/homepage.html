@@ -1,0 +1,11 @@
+{% extends "main.html" %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+   <h3 style="text-align: center; text-transform: uppercase;">Dingo</h3>
+   <div class="h-100 d-flex align-items-center justify-content-center">
+      {% load static %}
+      <img src="{% static 'greetings/img/welcome.jpg' %}" alt="pies dingo" />
+    </div>
+{% endblock %}

@@ -1,0 +1,58 @@
+{% extends 'main.html' %}
+
+{% block title %}
+  {{ title }}
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h3>Kontakt</h3>
+        <p>
+          Michał Kaczmarek <br />Adres: ul. Opisowa 20, 61-619 Poznań<br />telefon: 123456789
+        </p>
+      </div>
+      <div class="col" style="justify-content: right;">
+        <form method="post">
+          <div id="contact-form" class="form-container" data-form-container>
+            <div class="row">
+              <div class="form-title">
+                <span>Formularz kontaktowy</span>
+              </div>
+            </div>
+            <div class="input-container">
+              <div class="row">
+                <span class="req-input">
+                  <span class="input-status" style="padding: 5px;" data-toggle="tooltip" data-placement="top" title="Input Your First and Last Name."></span>
+                  <input type="text" class="form-control" data-min-length="8" placeholder="Imię i nazwisko" />
+                </span>
+              </div>
+              <div class="row">
+                <span class="req-input">
+                  <span class="input-status" data-toggle="tooltip" style="padding: 2px;" data-placement="top" title="Email"></span>
+                  <input type="email" class="form-control" placeholder="Email" />
+                </span>
+              </div>
+              <div class="row">
+                <span class="req-input">
+                  <span class="input-status" data-toggle="tooltip" style="padding: 2px;" data-placement="top" title="Phone number"></span>
+                  <input type="tel" class="form-control" placeholder="Numer telefonu" />
+                </span>
+              </div>
+              <div class="row">
+                <span class="req-input message-box">
+                  <span class="input-status" data-toggle="tooltip" style="padding: 3px;" data-placement="top" title="Please Include a Message."></span>
+                  <textarea type="textarea" class="form-control" data-min-length="10" placeholder="Wiadomość"></textarea>
+                </span>
+              </div>
+              <div class="row submit-row" style="padding-top: 10px;">
+                <button type="button" class="btn btn-primary submit-form">Wyślij</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}
